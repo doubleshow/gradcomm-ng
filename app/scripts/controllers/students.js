@@ -12,7 +12,7 @@ angular.module('myAppApp')
 
         var orderBy = $filter('orderBy')
 
-        $http.get('/data/data.json').success(function(data) {
+        $http.get('data/data.json').success(function(data) {
 
             $scope.students = data
 
