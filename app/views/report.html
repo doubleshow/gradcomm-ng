@@ -1,0 +1,22 @@
+<div class="container-fluid">	
+
+	<table class="table">
+		<tr><th>Name</th>
+			<th>Advisor</th>
+			<th ng-repeat="y in years">{{y}}</th>
+		</tr>
+
+		<tr ng-repeat="student in students">
+			<td>{{student.info.name}}</td>
+			<td>{{student.phd.advisor}}</td>
+			<td ng-repeat="y in years">
+				<div ng-show="student.timeline[y]">
+					<span style="font-size:70%">{{y}}</span><br>	
+					<span class="btn" ng-class="student.timeline[y].klass">{{student.timeline[y].name}}</span>
+				</div>
+			</td>
+		</tr>
+	</table>	
+
+
+</div>
